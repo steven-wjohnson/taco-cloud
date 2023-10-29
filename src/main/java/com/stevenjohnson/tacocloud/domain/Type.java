@@ -1,4 +1,4 @@
-package com.stevenjohnson.tacocloud;
+package com.stevenjohnson.tacocloud.domain;
 
 public enum Type {
     WRAP,
