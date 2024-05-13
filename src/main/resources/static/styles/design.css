@@ -1,0 +1,41 @@
+img {
+    max-width: 20%;
+}
+
+body {
+    max-width: 95%;
+    padding: 2em;
+}
+
+.grid {
+    display: grid;
+    gap: 1em;
+    grid-template-areas: 
+    "groupOne groupTwo"
+    "groupThree groupFour"
+    "groupFive groupComplete";
+}
+
+.ingredient-group-one {
+    grid-area: groupOne;
+}
+
+.ingredient-group-two {
+    grid-area: groupTwo;
+}
+
+.ingredient-group-three {
+    grid-area: groupThree;
+}
+
+.ingredient-group-four {
+    grid-area: groupFour;
+}
+
+.ingredient-group-five {
+    grid-area: groupFive;
+}
+
+.taco-complete-group {
+    grid-area: groupComplete;
+}
