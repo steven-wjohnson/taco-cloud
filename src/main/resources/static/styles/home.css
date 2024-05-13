@@ -1,3 +1,8 @@
 img {
     width: 30%;
 }
+
+.site-name {
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
