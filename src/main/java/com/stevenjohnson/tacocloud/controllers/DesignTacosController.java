@@ -55,22 +55,7 @@ public class DesignTacosController {
 
     @ModelAttribute(name="tacoOrder")
     public TacoOrder tacoOrder() {
-        return new TacoOrder("John Doe Home",
-        "123 Addison Rd", 
-        "Minneapolis",
-        "Minnesota",
-        "55112",
-        "5894100249521050",
-        "10/25",
-        "123", 
-        List.of(
-            new Taco("Carne Asada", List.of(
-                new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
-                new Ingredient("CARN", "Carnitas", Type.PROTEIN),
-                new Ingredient("SLSA", "Salsa", Type.SAUCE)
-                ))
-            )
-        );
+        return new TacoOrder();
     }
 
     @ModelAttribute(name="taco")

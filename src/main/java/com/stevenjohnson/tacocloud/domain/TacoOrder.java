@@ -15,6 +15,8 @@ public class TacoOrder {
     private String ccCVV;
     private List<Taco> tacos = new ArrayList<>();
 
+    public TacoOrder(){}
+
     public TacoOrder(String deliveryName, String deliveryStreet, String deliveryCity, String deliveryState,
             String deliveryZip, String ccNumber, String ccExpiration, String ccCVV, List<Taco> tacos) {
         this.deliveryName = deliveryName;
