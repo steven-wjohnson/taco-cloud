@@ -16,7 +16,6 @@ import com.stevenjohnson.tacocloud.domain.Taco;
 import com.stevenjohnson.tacocloud.domain.TacoOrder;
 import com.stevenjohnson.tacocloud.domain.Ingredient.Type;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -50,7 +49,7 @@ public class DesignTacosController {
     private Iterable<Ingredient> filterByType(List<Ingredient> ingredients, Type type) {
         return ingredients
         .stream()
-        .filter(x -> x.type().equals(type))
+        .filter(x -> x.getType().equals(type))
         .collect(Collectors.toList());
     }
 
@@ -76,11 +75,7 @@ public class DesignTacosController {
 
     @ModelAttribute(name="taco")
     public Taco taco() {
-        return new Taco("Beef & Cheddar", List.of(
-            new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
-            new Ingredient("GRBF", "Ground Beef", Type.PROTEIN),
-            new Ingredient("CHED", "Cheddar", Type.CHEESE)
-        )); 
+        return new Taco();
     }
 
     @GetMapping
