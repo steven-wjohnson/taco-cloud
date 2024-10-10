@@ -1,17 +1,30 @@
 package com.stevenjohnson.tacocloud.domain;
 
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.CreditCardNumber;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TacoOrder {
 
+    @NotBlank(message = "Delivery name is required")
     private String deliveryName;
+    @NotBlank(message = "Street is required")
     private String deliveryStreet;
+    @NotBlank(message = "City is required")
     private String deliveryCity;
+    @NotBlank(message = "State is required")
     private String deliveryState;
+    @NotBlank(message = "Zip code is required")
     private String deliveryZip;
+    @CreditCardNumber(message = "Not a valid credit card number")
     private String ccNumber;
+    @Pattern(regexp = "^(0[1-9]|1[0-2])([\\/])([2-9][0-9])$", message = "Must match format MM/YY")
     private String ccExpiration;
+    @Digits(integer = 3, fraction = 0, message = "Invalid security code")
     private String ccCVV;
     private List<Taco> tacos = new ArrayList<>();
 
@@ -68,6 +81,38 @@ public class TacoOrder {
 
     public List<Taco> getTacos() {
         return tacos;
+    }
+
+    public void setDeliveryName(String deliveryName) {
+        this.deliveryName = deliveryName;
+    }
+
+    public void setDeliveryStreet(String deliveryStreet) {
+        this.deliveryStreet = deliveryStreet;
+    }
+
+    public void setDeliveryCity(String deliveryCity) {
+        this.deliveryCity = deliveryCity;
+    }
+
+    public void setDeliveryState(String deliveryState) {
+        this.deliveryState = deliveryState;
+    }
+
+    public void setDeliveryZip(String deliveryZip) {
+        this.deliveryZip = deliveryZip;
+    }
+
+    public void setCcNumber(String ccNumber) {
+        this.ccNumber = ccNumber;
+    }
+
+    public void setCcExpiration(String ccExpiration) {
+        this.ccExpiration = ccExpiration;
+    }
+
+    public void setCcCVV(String ccCVV) {
+        this.ccCVV = ccCVV;
     }
 
     @Override

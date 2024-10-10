@@ -6,3 +6,11 @@ img {
     color: green;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.validation-error {
+    color: indianred;
+    font-family: Inconsolata, "Droid Sans Mono", monospace;
+    font-size: 1.15rem;
+}
+
+

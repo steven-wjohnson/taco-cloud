@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
     <title>Taco Cloud</title>
@@ -8,7 +8,7 @@
 
 <body>
     <h1>Design your taco!</h1>
-    <img th:src="@{/images/taco_logo.png}" />
+    <img th:src="@{/images/taco_logo.png}"  alt="big taco logo"/>
 
     <div th:errors="${taco}"></div>
 
@@ -52,8 +52,10 @@
             <div class="taco-complete-group">
                 <h3>Name your taco creation:</h3>
                 <input type="text" th:field="*{name}" />
+                <span class="validation-error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Taco Name Error</span>
                 <br />
                 <button>Submit Your Taco</button>
+                <span class="validation-error" th:if="${#fields.hasErrors('ingredients')}" th:errors="*{ingredients}">Ingredients Error</span>
             </div>
         </div>
         

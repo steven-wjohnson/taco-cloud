@@ -6,3 +6,27 @@ img {
     color: green;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.validation-error {
+    margin-left: 1em;
+    color: indianred;
+    font-family: Inconsolata, "Droid Sans Mono", monospace;
+    font-size: 1.15rem;
+}
+
+.order-form {
+    width: 90%;
+    margin: auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 15% 25% 1fr;
+}
+.form-row input {
+    max-width: 20rem;
+}
+
+.form-row label {
+    max-width: 15rem;
+}
