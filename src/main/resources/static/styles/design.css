@@ -39,3 +39,9 @@ body {
 .taco-complete-group {
     grid-area: groupComplete;
 }
+
+.validation-error {
+    color: indianred;
+    font-family: Inconsolata, "Droid Sans Mono", monospace;
+    font-size: 1.15rem;
+}
